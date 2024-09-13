@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Movie Script Search</title>
+</head>
+<body>
+    <header>
+        <h1>Scripts!</h1>
+    </header>
+    
+    <main id="content">
+        <div class="sidebar">
+            <p>Use search bar to find movie scripts</p>
+        </div>
+        <input type="text" id="searchText" placeholder="Enter movie title...">
+        <button id="searchButton">Search</button>
+        <div id="searchCount"></div>
+        <div id="movieResults"></div>
+    </main>
+    <div id="popup" class="hidden">
+        <div id="popupContent"></div>
+        <button id="closeButton" class="close-button">&times;</button>
+    </div>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Search</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/init.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

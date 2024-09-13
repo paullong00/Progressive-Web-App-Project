@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="manifest.json">
+    <title>PWA App</title>
+</head>
+<body>
+    <header>
+        <h1>Flickr!</h1>
+        <button id="clearCacheButton">Clear Cache</button>
+    </header>
+    
+    <main>
+        <h2>View Flickr Images</h2>
+
+            <div class="sidebar">
+                <button class="search-button" data-search-term="Ivan Aivazovsky">Ivan Aivazovsky</button>
+                <button class="search-button" data-search-term="Henry Pether">Henry Pether</button>
+                <button class="search-button" data-search-term="Robin Jacques">Robin Jacques</button>
+            </div>
+        
+        
+        <div id="flickrResults">
+            <div id="loadingMessage">Loading images...</div>
+            <div id="imagesContainer" style="display:none;"></div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="movies.html">Search</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="js/app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/js/serviceWorker.js');
+            });
+        }
+    </script>
+</body>
+</html>
